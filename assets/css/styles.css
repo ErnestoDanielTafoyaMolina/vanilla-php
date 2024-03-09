@@ -22,7 +22,7 @@ body {
 .container > app-footer {
     width: 100%;
     grid-column: 1/-1;
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 .container > app-header{
