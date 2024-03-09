@@ -11,15 +11,9 @@
     <app-header></app-header>
     <div class="content">
         <app-main></app-main>
-        <aside>
-            <h3>Aside</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At commodi magnam voluptatibus qui nisi. Quasi, voluptas facilis
-                 vitae voluptatibus hic quis voluptate, itaque illo, excepturi tenetur doloribus! Quidem, quos itaque?</p>
-        </aside>
+        <app-aside></app-aside>
     </div>
-    <footer>
-        <p>DanioErit &copy; 2024</p>
-    </footer>
+    <app-footer></app-footer>
 </div>
 <script type="module" src="./assets/js/index.js"></script>
 </body>

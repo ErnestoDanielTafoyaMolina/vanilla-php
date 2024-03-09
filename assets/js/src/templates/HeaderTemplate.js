@@ -4,9 +4,7 @@ export const HeaderStyles = () => {
 
         header {
             background-color: black;
-            background-color: black;
             color: aliceblue;
-            grid-column: span 5;
             padding: 5px;
         }
         header > nav {

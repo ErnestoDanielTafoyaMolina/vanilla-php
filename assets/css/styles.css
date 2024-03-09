@@ -16,16 +16,16 @@ body {
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: auto 1fr auto;
     background-color: beige;
+    width: 100%;
 }
 .container > app-header,
-.container > footer {
-    background-color: black;
-    color: aliceblue;
-    grid-column: span 5;
+.container > app-footer {
+    width: 100%;
+    grid-column: 1/-1;
     padding: 5px;
 }
 
-app-header{
+.container > app-header{
     position: sticky;
     top:0;
     z-index: 1000;
@@ -38,17 +38,17 @@ app-header{
     min-height: 100vh;
     gap: 2rem;
 }
+
+.container > .content > app-main,
+.container > .content > app-aside {
+    background-color: #fff;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
 .container > .content > app-main {
     grid-column: span 3;
     grid-row:1/-1 ;
 }
-.container > .content > app-main,
-.container > .content > aside {
-    background-color: #fff;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-}
-
-.container > .content > aside {
+.container > .content > app-aside {
     position: sticky;
     grid-column: span 2;
     grid-row: 1/-1;
@@ -59,35 +59,9 @@ app-header{
     overflow-y: auto;
 }
 
-.container > .content > aside {
-    display: flex ;
-    flex-direction: column;
-    /* gap: 1em; */
-    padding: 1em;
-    justify-content: center;
-    align-items: center;
-    text-align: justify;
-}
-.container > .content > aside > h3 {
- justify-self: flex-end;
- align-self: center;
-
-}
-.container > .content > aside > p {
-    margin-top: auto; /* Mueve el p hacia abajo */
-    margin-bottom: auto; /* Mueve el p hacia arriba */
-    text-align: justify; /* Centra horizontalmente el texto del p */
-}
-.container > footer {
-    display: flex;
-    align-items: center;
-    padding: 1em;
-    justify-content: center;
-}
-
 @media screen AND (max-width: 768px) {
     .container > .content > app-main,
-    .container > .content > aside {
+    .container > .content > app-aside {
 
         grid-column: 1/6;
         grid-row:span 1;
